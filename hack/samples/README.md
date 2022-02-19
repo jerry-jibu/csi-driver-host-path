@@ -2,7 +2,7 @@
 **NOTE**: hostpath snapshot is a simulation for csi snapshot interface. It's restricted to only single node env.
 
 1. install CSI snapshot environment. 
-- git clone https://github.com/kubernetes-csi/external-snapshotter
+- git clone https://github.com/jerry-jibu/external-snapshotter
 - install snapshot crd and controller
 
 ```
@@ -10,7 +10,7 @@ git checkout origin/release-4.0
 kubectl apply -f client/config/crd
 kubectl apply -f deploy/kubernetes/snapshot-controller
 
-# replace snapshot controller's image to registry.cn-shanghai.aliyuncs.com/jibu-ys1000-testsnapshot-controller:v4.0.0
+# replace snapshot controller's image to registry.cn-shanghai.aliyuncs.com/jibu-ys1000-test/snapshot-controller:v4.0.0
 kubectl edit  statefulsets.apps snapshot-controller
 
 [root@gyj-dev external-snapshotter]# kubectl get pods
